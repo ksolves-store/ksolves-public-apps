@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template inherit_id="web.assets_backend" name="js assets" id="assets_backend_ks_edit_log_message" priority="18">
+        <xpath expr="." position="inside">
+            <script src="ks_edit_log_message/static/src/js/ks_custom_mail.js" type="text/javascript"/>
+            <script src="ks_edit_log_message/static/src/js/ks_edit_log.js" type="text/javascript"/>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="ks_calculator_item">
+        <li class="o_mail_navbar_item">
+            <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Calculator" href="#">
+                <i class="fa fa-calculator" />
+            </a>
+            <ul class="ks_calculator_dropdown dropdown-menu p-0" role="menu">
+                <li class="o_mail_navbar_dropdown_top">
+                    <div class="ks_calculator" id="dark_mode">
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input ks_dark_mode" id="ks_custome_dark_mode" />
+                            <label class="custom-control-label" for="ks_custome_dark_mode"><small>Dark mode</small></label>
+                        </div>
+                        <center>
+                            <form class="ks-calc-form" name="f1">
+                                <div class="title">Calculator</div>
+
+                                <table border="1">
+                                    <tr>
+                                        <td><input class="ks_clear_screen" type="button" value="c" /></td>
+                                        <td colspan="3"><input type="text" id="edu" autocomplete="off" /></td>
+                                        <!--     clr() function will call clr to clear all value -->
+                                    </tr>
+                                    <tr>
+                                        <!-- creating buttons and assigning values-->
+                                        <td><input class="ks_equal_values" type="button" value="+" /></td>
+                                        <td><input class="ks_equal_values" type="button" value="1" /></td>
+                                        <td><input class="ks_equal_values" type="button" value="2" /></td>
+                                        <td><input class="ks_equal_values" type="button" value="3" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input class="ks_equal_values" type="button" value="-" /></td>
+                                        <td><input class="ks_equal_values" type="button" value="4" /></td>
+                                        <td><input class="ks_equal_values" type="button" value="5" /></td>
+                                        <td><input class="ks_equal_values" type="button" value="6" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input class="ks_equal_values" type="button" value="*" /></td>
+                                        <td><input class="ks_equal_values" type="button" value="7" /></td>
+                                        <td><input class="ks_equal_values" type="button" value="8" /></td>
+                                        <td><input class="ks_equal_values" type="button" value="9" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input class="ks_equal_values" type="button" value="/" /></td>
+                                        <td><input class="ks_equal_values" type="button" value="." /></td>
+                                        <td><input class="ks_equal_values" type="button" value="0" /></td>
+                                        <!-- Evaluating function call eval()-->
+                                        <td><input class="ks_get_values" type="button" value="=" /></td>
+                                    </tr>
+                                </table>
+
+                                <br />
+                            </form>
+                        </center>
+                    </div>
+                </li>
+            </ul>
+        </li>
+    </t>
+</templates>

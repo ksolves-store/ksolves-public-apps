@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="ks_view_company_form_inherit" model="ir.ui.view">
+        <field name="name">res.company.view.inherit</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form"/>
+        <field name="arch" type="xml">
+            <field name="website" position="after">
+                <field name="ks_latitude" placeholder="Latitude"/>
+                <field name="ks_longitude" placeholder="Longitude"/>
+                <field name="ks_zoom" placeholder="Zoom Level"/>
+            </field>
+        </field>
+    </record>
+
+    <template id="ks_map_placing" inherit_id="website.company_description">
+        <xpath expr="//address" position="after">
+            <div id="mapid" style="height: 300px; width:450px;"/>
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_ks_calculator_ks_calculator,ks_calculator.ks_calculator,model_ks_calculator_ks_calculator,base.group_user,1,1,1,1

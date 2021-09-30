@@ -2,8 +2,8 @@
 <odoo>
     <template id="assets_frontend" inherit_id="web.assets_frontend" name="Ks_Map Assets">
         <xpath expr="." position="inside">
-            <link rel="stylesheet" href="/ks_map/static/lib/leaflet/leaflet.css"/>
-            <script type="text/javascript" src="/ks_map/static/lib/leaflet/leaflet.js"></script>
+            <link rel="stylesheet" href="/ks_map/static/libr/leaflet/leaflet.css"/>
+            <script type="text/javascript" src="/ks_map/static/libr/leaflet/leaflet.js"></script>
             <script type="text/javascript" src="/ks_map/static/src/js/ks_map.js"></script>
         </xpath>
     </template>

@@ -9,7 +9,8 @@
             <field name="website" position="after">
                 <field name="ks_latitude" placeholder="Latitude"/>
                 <field name="ks_longitude" placeholder="Longitude"/>
-                <field name="ks_zoom" placeholder="Zoom Level"/>
+                <field name="ks_zoom"/>
+                <field name="ks_token" placeholder="Access Token"/>
             </field>
         </field>
     </record>

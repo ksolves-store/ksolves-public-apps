@@ -11,5 +11,6 @@ class KsMapCod(http.Controller):
         if ks_co_ordinate and ks_co_ordinate.ks_longitude and ks_co_ordinate.ks_latitude:
             cod = {'lon': ks_co_ordinate.ks_longitude,
                    'lan': ks_co_ordinate.ks_latitude,
-                   'zoom': ks_co_ordinate.ks_zoom}
+                   'zoom': ks_co_ordinate.ks_zoom,
+                   'token': ks_co_ordinate.ks_token}
         return cod

@@ -4,8 +4,8 @@ odoo.define('ks_product_price_list.ks_price_unit_widget', function(require) {
     var core = require('web.core');
     var QWeb = core.qweb;
     var widget_registry = require('web.widget_registry');
-    var Widget = require('web.Widget');
     var QtyAtDateWidget = require('sale_stock.QtyAtDateWidget');
+    var Widget = require('web.Widget');
     var _t = core._t;
 
     var KsCustomDateWidget = Widget.extend({
@@ -23,15 +23,6 @@ odoo.define('ks_product_price_list.ks_price_unit_widget', function(require) {
             var res = this._super.apply(this, arguments);
             this._setPopOver();
             return res
-        },
-        updateState: function(state) {
-            this.$el.popover('dispose');
-            var candidate = state.data[this.getParent().currentRow];
-            if (candidate) {
-                this.data = candidate.data;
-                this.renderElement();
-                this._setPopOver();
-            }
         },
 
         _getContent() {
@@ -57,37 +48,35 @@ odoo.define('ks_product_price_list.ks_price_unit_widget', function(require) {
                 },
             };
             this.$el.popover(options);
-//            this.$el.on('show.bs.popover', function() {
-//                $('.popover').popover('hide');
-//            })
-//            $(window).click(function(e) {
-//                if ($(e.target).parents().length>1 && !$($(e.target).parents()[1]).data("bs.popover")){
-//                    $('.popover').popover('hide');
-//                }
-//
-//        });
+            this.$el.on('show.bs.popover', function() {
+                $('.popover').popover('hide');
+            })
+            $(window).click(function(e) {
+                if ($(e.target).parents().length>1){
+                    $('.popover').popover('hide');
+                }
+
+        });
         },
 
         _ksOnClickButton: function() {
             this.$el.find('.graph').prop('special_click', true);
         },
     });
+    QtyAtDateWidget.include({
+        _setPopOver() {
+            this._super.apply(this, arguments);
+            this.$el.on('show.bs.popover', function() {
+                $('.popover').popover('hide')
+            })
+            $(window).click(function(e) {
+                if ($(e.target).parents().length>1 && !$($(e.target).parents()[1]).data("bs.popover")){
+                    $('.popover').popover('hide');
+                }
+        });
+        }
 
-//    QtyAtDateWidget.include({
-//        _setPopOver() {
-//            this._super.apply(this, arguments);
-//            this.$el.on('show.bs.popover', function() {
-//                $('.popover').popover('hide')
-//            })
-//            $(window).click(function(e) {
-//                if ($(e.target).parents().length>1 && !$($(e.target).parents()[1]).data("bs.popover")){
-//                    $('.popover').popover('hide');
-//                }
-//        });
-//        }
-//
-//    })
-
+    })
     widget_registry.add('ks_price_unit_widget', KsCustomDateWidget);
 
     return KsCustomDateWidget

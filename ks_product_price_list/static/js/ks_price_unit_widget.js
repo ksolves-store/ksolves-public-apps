@@ -49,10 +49,11 @@ odoo.define('ks_product_price_list.ks_price_unit_widget', function(require) {
             };
             this.$el.popover(options);
             this.$el.on('show.bs.popover', function() {
-                $('.popover').popover('hide');
+                 $('.popover').popover('hide');
+
             })
             $(window).click(function(e) {
-                if ($(e.target).parents().length>1){
+                if ($(e.target).parents().length>1 && !$(e.target).hasClass('ks_graph')){
                     $('.popover').popover('hide');
                 }
 
@@ -70,7 +71,7 @@ odoo.define('ks_product_price_list.ks_price_unit_widget', function(require) {
                 $('.popover').popover('hide')
             })
             $(window).click(function(e) {
-                if ($(e.target).parents().length>1 && !$($(e.target).parents()[1]).data("bs.popover")){
+                if ($(e.target).parents().length>1 && !$(e.target).hasClass('ks_graph')){
                     $('.popover').popover('hide');
                 }
         });

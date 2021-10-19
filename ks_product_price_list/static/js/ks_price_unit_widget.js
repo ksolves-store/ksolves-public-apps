@@ -61,7 +61,7 @@ odoo.define('ks_product_price_list.ks_price_unit_widget', function(require) {
         },
 
         _ksOnClickButton: function() {
-            this.$el.find('.graph').prop('special_click', true);
+            this.$el.find('.ks_graph').prop('special_click', true);
         },
     });
     QtyAtDateWidget.include({

@@ -1,0 +1,20 @@
+<odoo>
+
+    <template id="ks_signin" inherit_id="web.login" primary="True">
+         <xpath expr="//div[hasclass('field-login')]" position="before">
+
+        </xpath>
+    </template>
+
+    <template id="ks_signup" inherit_id="auth_signup.signup" primary="True">
+
+    </template>
+
+<!--    <template id="assets_login" inherit_id="web.assets_frontend">-->
+<!--   	 	<xpath expr="." position="inside" >-->
+<!--   	 		<link rel="stylesheet" href="/ks_login/static/src/css/web_login_style.css"/>-->
+<!--   	 	</xpath>-->
+<!--    </template>-->
+
+
+</odoo>

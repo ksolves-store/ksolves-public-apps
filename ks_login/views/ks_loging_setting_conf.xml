@@ -1,0 +1,101 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="ks_login.list">
+      <field name="name">ks_login list</field>
+      <field name="model">ks_login.setting.conf</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="ks_is_active"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="ks_login.form">
+      <field name="name">ks_login form</field>
+      <field name="model">ks_login.setting.conf</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <div class="oe_title" id="title">
+              <label for="name" class="oe_edit_only"/>
+              <h1>
+                <field name="name" placeholder="Name" style="width: 150%;"/>
+              </h1>
+            </div>
+            <group>
+              <group>
+                <field name="ks_website_id"
+                options="{'no_open':True,'no_create':1,'no_create_edit':1}" widget="many2many_tags"/>
+              </group>
+              <group>
+                <group>
+                  <field name="ks_is_active"/>
+                </group>
+                <group></group>
+              </group>
+            </group>
+            <notebook>
+              <page string="Signup Fields">
+                <field name="ks_fields_ids">
+                      <form string=" Create Field Detail">
+                        <group>
+                          <group>
+                            <field name="ks_field_id"/>
+                            <field name="ks_field_label"/>
+                            <field name="ks_placeholder" placeholder="Add a placeholder.."/>
+                          </group>
+                          <group>
+                            <field name="ks_field_type"/>
+                            <field name="ks_sequence"/>
+                            <field name="ks_no_of_column"/>
+                            <field name="ks_is_required"/>
+                          </group>
+                          <field name="ks_description" string="Help" placeholder="Add a description for customers..."/>
+                        </group>
+                      </form>
+                    <tree>
+                      <field name="ks_field_id"/>
+                      <field name="ks_field_label"/>
+                      <field name="ks_is_required"/>
+                    </tree>
+                </field>
+              </page>
+              <page string="Background Settings">
+                <group>
+                  <group>
+                    <field name="ks_checkbox" widget="radio"/>
+                    <field name="ks_backgroud_img" widget="image" class="oe_avatar" attrs="{'invisible':[('ks_checkbox','=','none')]}"/>
+                  </group>
+                  <group>
+                  </group>
+                </group>
+              </page>
+              <page string="Content Writing">
+                <group>
+                    <field name="ks_signup_content" placeholder="Registration is free and easy! Please enter the following information to create your account."/>
+                    <field name="ks_login_content" placeholder="Registration is free and easy! Please enter the following information to create your account."/>
+                    <field name="ks_pw_reset_content" placeholder="Registration is free and easy! Please enter the following information to create your account."/>
+                </group>
+              </page>
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+
+    <record model="ir.actions.act_window" id="ks_login.action_window">
+      <field name="name">Signup settings</field>
+      <field name="res_model">ks_login.setting.conf</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Login Setting" id="ks_login_menu_1_list" parent="website.menu_website_global_configuration"
+              action="ks_login.action_window" sequence="1"/>
+  </data>
+</odoo>

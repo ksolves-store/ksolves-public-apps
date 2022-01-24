@@ -1,4 +1,4 @@
-odoo.define('email_cc/static/src/js/message_inherit.js', function (require) {
+odoo.define('ks_email_cc/static/src/js/message_inherit.js', function (require) {
     'use strict';
 
     const {
@@ -7,7 +7,7 @@ odoo.define('email_cc/static/src/js/message_inherit.js', function (require) {
     } = require('mail/static/src/model/model_core.js');
     const { attr } = require('mail/static/src/model/model_field.js');
 
-    registerFieldPatchModel('mail.message', 'email_cc/static/src/js/message_inherit.js', {
+    registerFieldPatchModel('mail.message', 'ks_email_cc/static/src/js/message_inherit.js', {
         ks_cc_partners: attr({
             default: false,
         }),
@@ -21,7 +21,7 @@ odoo.define('email_cc/static/src/js/message_inherit.js', function (require) {
             default: false,
         }),
     });
-    registerClassPatchModel('mail.message', 'email_cc/static/src/js/message_inherit.js', {
+    registerClassPatchModel('mail.message', 'ks_email_cc/static/src/js/message_inherit.js', {
         //----------------------------------------------------------------------
         // Public
         //----------------------------------------------------------------------

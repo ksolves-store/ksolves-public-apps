@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<odoo>
-    <template id="assets_backend" name="ks search view assets" inherit_id="web.assets_backend">
-        <xpath expr="." position="inside">
-            <script type="text/javascript" src="/ks_product_price_list/static/js/ks_price_unit_widget.js"/>
-        </xpath>
-    </template>
-</odoo>

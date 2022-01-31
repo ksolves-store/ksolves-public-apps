@@ -1,2 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_ks_edit_log_message_ks_edit_log_message,ks_edit_log_message.ks_edit_log_message,model_ks_edit_log_message_ks_edit_log_message,base.group_user,1,1,1,1

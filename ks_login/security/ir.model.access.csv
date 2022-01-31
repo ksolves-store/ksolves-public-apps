@@ -1,3 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_ks_login_setting_conf,ks_login_setting_conf,model_ks_login_setting_conf,,1,1,1,1
-access_ks_login_dynamic_fields,ks_login_dynamic_fields,model_ks_login_dynamic_fields,,1,1,1,1

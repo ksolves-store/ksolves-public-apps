@@ -1,2 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_ks_product_price_list_ks_product_price_list,ks_product_price_list.ks_product_price_list,model_ks_product_price_list_ks_product_price_list,base.group_user,1,1,1,1

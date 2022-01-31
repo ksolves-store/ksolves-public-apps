@@ -24,7 +24,7 @@
     'sequence': 1,
     'depends': ['base','web','mail'],
     'images': [
-
+        "static/description/email_cc_banner.gif",
     ],
     'data': [
         'wizard/ks_message_compose_inherit.xml',

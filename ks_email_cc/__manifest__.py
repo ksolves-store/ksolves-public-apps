@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Email CC",
+    'name': "Email Cc an Bcc",
 
     'summary': """
-        
+            Email Cc and Bcc apps allows a user to send mail in mail composer keeping partner's or emails directly in Cc and Bcc
         """,
 
     'description': """

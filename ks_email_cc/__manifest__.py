@@ -11,10 +11,10 @@
 
     'author': "Ksolves India Ltd.",
     'website': "https://www.ksolves.com/",
-    # 'category': 'Tools',
-    'license': 'OPL-1',
+    'category': 'Tools',
+    'license': 'LGPL-3',
     'currency': 'USD',
-    # 'price': 148.2,
+    'price': 0.0,
     # "live_test_url":  "http://saastoolkit.kappso.in/",
     'version': '14.0.1.0.0',
     'maintainer': 'Ksolves India Ltd.',

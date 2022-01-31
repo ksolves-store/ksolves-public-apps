@@ -19,8 +19,17 @@ odoo.define('ks_calculator.ks_calculator.js', function(require) {
             "click .ks_get_values": "_ksGetValues",
             "click .ks_clear_screen": "_ksClearScreen",
             'keypress input': '_onKeypress',
-            'click .ks_dark_mode': '_ksDarkMode'
+            'click .ks_dark_mode': '_ksDarkMode',
+            'hide.bs.dropdown': "ksHideDropDown",
 
+        },
+
+        ksHideDropDown : function(event){
+            if (!event.clickEvent) {
+                return true;
+            }
+            var target = $(event.clickEvent.target);
+            return !(target.hasClass('ks_calculator') || target.parents('.ks_calculator').length);
         },
         _ksFetchValues: function(event) {
             if ($(event.target).is('i') === false) {
@@ -31,8 +40,38 @@ odoo.define('ks_calculator.ks_calculator.js', function(require) {
         //function for evaluation
         _ksGetValues: function _ksGetValues() {
             let x = $('#edu').val()
-            let y = eval(x)
-            $('#edu').val(y)
+                if(x.length > 1){
+                    if(x.match(/[a-z]/i)){
+                        alert('You can only use number to compute')
+                        return false
+                    }
+                    if(x.includes(" ")){
+                        x= x.split(" ").join("")
+                    }
+//                    if(x[0] ==='0' && x.includes('.') ){
+////                        var int_part = Math.trunc(x); // returns 3
+////                         x = Number((x-int_part).toFixed(9))
+//
+//                    }
+                    var ks_lst = ['+','-','/','*',]
+                    var ks_alpha = ['!','@','#','$','%','^','&','_','{','}','[',']',':',';','>','<',',','?',"'",'"','=','|']
+                    if(ks_lst.includes(x[x.length - 1]) || ks_lst.includes(x[0]) ){
+                        return false
+                    }
+//                    if(x[0] ==='0' ){
+//                        var int_part = Math.trunc(x); // returns 3
+//                         x = Number((x-int_part).toFixed(2))
+//                    }
+                    for(var n = 0; n < ks_alpha.length; n++){
+                        if (ks_alpha.includes(x[n])){
+                            return false
+                        }
+                    }
+                    let y = eval(x)
+                    $('#edu').val(y)
+                }else if(x.length===1){
+                    return false
+                }
         },
          //function for key press
         _onKeypress: function(e) {
@@ -40,8 +79,43 @@ odoo.define('ks_calculator.ks_calculator.js', function(require) {
             var valueEntered = String.fromCharCode(keycode);
             if (e.which == 13) {
                 let x = $('#edu').val()
-                let y = eval(x)
-                $('#edu').val(y)
+                if(x.length > 1){
+                    if(x.match(/[a-z]/i)){
+                        alert('You can only use number to compute')
+                        return false
+                    }
+                    if(x.includes(" ")){
+                        x= x.split(" ").join("")
+                    }
+
+                    var ks_lst = ['+','-','/','*',]
+                    var ks_alpha = ['!','@','#','$','%','^','&','_','{','}','[',']',':',';','>','<',',','?',"'",'"','=','|']
+                    if(ks_lst.includes(x[x.length - 1]) || ks_lst.includes(x[0]) ){
+                        return false
+                    }
+//                    var ks_val_lngt = x.length
+//                    if(x[0]==='0'){
+//                    var temp = ks_val_lngt
+//                    for(var ks = 0; ks <=temp-2; ks++){
+//                        if(x[ks] ==='0'){
+//                            x = x.replace(x[ks], '')
+//                            temp = x.length
+//                        }
+//                    }
+//                    }
+
+                    for(var n = 0; n < ks_alpha.length; n++){
+                        if (ks_alpha.includes(x[n])){
+                            return false
+                        }
+                    }
+                    let y = eval(x)
+                    $('#edu').val(y)
+                }else if(x.length===1){
+                    return false
+                }
+
+
             }
 
         },
@@ -51,9 +125,7 @@ odoo.define('ks_calculator.ks_calculator.js', function(require) {
         },
         // function for  dark mode
         _ksDarkMode: function(event) {
-            event.stopPropagation();
             $("#dark_mode").toggleClass("dark-mode");
-            $('.ks_calculator_dropdown').addClass('show');
         },
 
     });

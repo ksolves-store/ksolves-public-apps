@@ -55,6 +55,7 @@ class KsStockLocationExtension(models.Model):
         else:
             self.ks_user_ids = [Command.link(0)]
 
+    @api.onchange('usage')
     def _compute_is_readonly(self):
         if self.usage == 'internal':
             self.ks_is_readonly = False

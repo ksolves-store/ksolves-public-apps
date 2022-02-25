@@ -6,11 +6,13 @@
         Stock Access Restriction v15.0""",
 
     'description': """
-        Long description of module's purpose
+        This application provides Odoo users with the feature to apply restrictions on stock location.
+        Only those users can access the location who have the permission.
     """,
 
     'author': "Ksolves India Pvt. Ltd.",
     'website': "https://store.ksolves.com/",
+    'images': ['static/description/Banner.png'],
     'category': 'Stock Management',
     'version': '0.1',
 
@@ -19,7 +21,6 @@
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
         'views/ks_stock_location_extension_view.xml',
         'views/ks_res_users_extension_view.xml',
         'security/security.xml'

@@ -10,7 +10,7 @@
         Only those users can access the location who have the permission.
     """,
 
-    'author': "Ksolves India Pvt. Ltd.",
+    'author': "Ksolves India Ltd.",
     'website': "https://store.ksolves.com/",
     'images': ['static/description/Banner.png'],
     'category': 'Stock Management',

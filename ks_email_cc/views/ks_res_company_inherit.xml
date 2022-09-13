@@ -13,6 +13,7 @@
                             <field name="ks_display_reply_to"/>
                             <field name="ks_display_recipients_cc"/>
                             <field name="ks_display_recipients_bcc"/>
+                            <field name="ks_email_to"/>
                         </group>
                         <group>
                             <field name="ks_default_cc" attrs="{'invisible': [('ks_display_email_cc','=', False)]}"/>

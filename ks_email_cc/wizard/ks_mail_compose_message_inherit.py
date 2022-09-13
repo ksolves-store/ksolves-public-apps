@@ -16,6 +16,7 @@ class KsMailComposeMessageInherit(models.TransientModel):
     ks_email_char_cc_visibility = fields.Boolean(compute='compute_fields_visibility', default=lambda self: self.env.user.company_id.ks_display_email_cc)
     ks_email_char_bcc_visibility = fields.Boolean(compute='compute_fields_visibility', default=lambda self: self.env.user.company_id.ks_display_email_bcc)
     ks_reply_to_bcc_visibility = fields.Boolean(compute='compute_fields_visibility', default=lambda self: self.env.user.company_id.ks_display_reply_to)
+    ks_email_to_visibility = fields.Boolean(compute='compute_fields_visibility', default=lambda self: self.env.user.company_id.ks_email_to)
 
     def compute_fields_visibility(self):
         for rec in self:
@@ -24,6 +25,7 @@ class KsMailComposeMessageInherit(models.TransientModel):
             rec.ks_reply_to_bcc_visibility = True if self.env.user.company_id.ks_display_reply_to else False
             rec.ks_cc_partner_visibility = True if self.env.user.company_id.ks_display_recipients_cc else False
             rec.ks_bcc_partner_visibility = True if self.env.user.company_id.ks_display_recipients_bcc else False
+            rec.ks_email_to_visibility = True if self.env.user.company_id.ks_email_to else False
 
     def get_mail_values(self, res_ids):
         res = super(KsMailComposeMessageInherit, self).get_mail_values(res_ids)

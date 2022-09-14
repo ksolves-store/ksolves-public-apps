@@ -17,7 +17,7 @@
                 <field name="ks_bcc_partner_ids" widget="many2many_tags_email"
                        string="Bcc (Partners)"
                        attrs="{'invisible': ['|', ('ks_bcc_partner_visibility','=', False), ('is_log','=', True)]}"/>
-                <field name="email_to" colspan="2" attrs="{'invisible': [('is_log','=', True)]}"/>
+                <field name="email_to" colspan="2" attrs="{'invisible': ['|', ('is_log','=', True),('ks_email_to_visibility','=', False)]}"/>
                 <field name="ks_email_char_cc" attrs="{'invisible': ['|', ('is_log','=', True),('ks_email_char_cc_visibility','=', False)]}"/>
                 <field name="ks_email_char_bcc" attrs="{'invisible': ['|', ('is_log','=', True),('ks_email_char_bcc_visibility','=', False)]}"/>
                 <field name="ks_email_char_cc_visibility" invisible="1"/>
@@ -25,6 +25,7 @@
                 <field name="ks_reply_to_bcc_visibility" invisible="1"/>
                 <field name="ks_cc_partner_visibility" invisible="1"/>
                 <field name="ks_bcc_partner_visibility" invisible="1"/>
+                <field name="ks_email_to_visibility" invisible="1"/>
             </xpath>
         </field>
     </record>

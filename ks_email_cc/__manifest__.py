@@ -16,7 +16,7 @@
     'currency': 'USD',
     'price': 0.0,
     # "live_test_url":  "http://saastoolkit.kappso.in/",
-    'version': '14.0.1.0.0',
+    'version': '14.0.1.0.1',
     'maintainer': 'Ksolves India Ltd.',
     'support': 'sales@ksolves.com',
     'installable': True,

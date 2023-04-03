@@ -96,20 +96,72 @@
     </div>
     <!-- tab view start -->
     <div>
+        <div class="justify-content-center d-flex">
+            <!-- Nav pills -->
+            <ul class="nav o_tab_nav"
+                style="border: 1px solid #203038;  border-radius: 6px 6px;overflow:hidden;background-color:transparent">
 
-            <div class="card-body p-0">
-                <div class="text-center pb-5">
-                    <h2 style="color: #0b3b52; font-weight: 600; font-size: 2.5rem;">Frequently Asked Question</h2>
-                </div>
-                <div class="s_faq mx-2 mx-md-5 mb-5">
-                    <div id="accordion">
-                        <div class="card shadow mb-4" style="border: none; border-left: 10px solid #203038;">
-                            <div class="card-header py-4 pl-4 pr-5 bg-white position-relative d-flex justify-content-between"
-                                 style="border: none;">
-                                <div class="pr-5" style="font-size: 1.6rem; font-weight: 600; color: #0b3b52;">Need
-                                    some customization in this app, whom to contact?
-                                </div>
-                                <a class="card-link collapsed" data-toggle="collapse" href="#faqOne" style="
+                <li class="nav-item">
+                    <a class="nav-link px-md-4 list-group-item-beta-dark list-group-item-action" data-toggle="pill"
+                       href="#Screenshot"
+                       style="border-radius: 0px; border-right: 1px solid #203038;opacity: 1;padding:16px;">Screenshots</a>
+                </li>
+                <!--          <li class="nav-item">-->
+                <!--            <a class="nav-link px-md-4" data-toggle="pill" href="#UserGuide"  style="border-radius: 0px; border-right: 1px solid #203038;opacity: 1;padding:16px;">User Guide</a>-->
+                <!--          </li>-->
+                <li class="nav-item">
+                    <a class="nav-link px-md-4 list-group-item-beta-dark list-group-item-action" data-toggle="pill"
+                       href="#FAQ" style="border-radius: 0px;opacity: 1;padding:16px;">FAQ's</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Tab panes -->
+        <div class="tab-content py-5">
+            <div class="tab-pane active" id="Screenshot">
+
+                <section class="card mb-5" style="border: none;">
+                    <div class="card-body pb-5">
+                        <div class="text-center pb-5 pt-4">
+                            <div class="pb-1">
+                                <img src="screenshot/sl_install.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="pb-1">
+                                <img src="screenshot/allowed_users.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="pb-1">
+                                <img src="screenshot/public_location.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="pb-1">
+                                <img src="screenshot/access_private_location.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="pb-1">
+                                <img src="screenshot/Default_Location .png" alt="" class="img-fluid">
+                            </div>
+                            <div class="pb-1">
+                                <img src="screenshot/Super_user.png" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="tab-pane fade" id="UserGuide">
+                User Guide
+            </div>
+            <div class="tab-pane fade" id="FAQ">
+                <div class="card-body p-0">
+                    <div class="text-center pb-5">
+                        <h2 style="color: #0b3b52; font-weight: 600; font-size: 2.5rem;">Frequently Asked Question</h2>
+                    </div>
+                    <div class="s_faq mx-2 mx-md-5 mb-5">
+                        <div id="accordion">
+                            <div class="card shadow mb-4" style="border: none; border-left: 10px solid #203038;">
+                                <div class="card-header py-4 pl-4 pr-5 bg-white position-relative d-flex justify-content-between"
+                                     style="border: none;">
+                                    <div class="pr-5" style="font-size: 1.6rem; font-weight: 600; color: #0b3b52;">Need
+                                        some customization in this app, whom to contact?
+                                    </div>
+                                    <a class="card-link collapsed" data-toggle="collapse" href="#faqOne" style="
                                       width: 48px;
                                       height: 40px;
                                       line-height: 11px;
@@ -117,24 +169,23 @@
                                       border-radius: 2px;
                                       padding: 0;
                                       font-size: 24px;"></a>
-                            </div>
-                            </div>
-                            <div id="faqOne" class="collapse" data-parent="#accordion">
-                                <div class="card-body pt-0 pl-4">
-                                    <div style="font-size: 1.4rem; color: #0b3b52;">
-                                        Please drop email at sales@ksolves.com or raise a ticket through Odoo store
-                                        itself.
+                                </div>
+                                <div id="faqOne" class="collapse" data-parent="#accordion">
+                                    <div class="card-body pt-0 pl-4">
+                                        <div style="font-size: 1.4rem; color: #0b3b52;">
+                                            Please drop email at sales@ksolves.com or raise a ticket through Odoo store
+                                            itself.
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="card shadow mb-4" style="border: none; border-left: 10px solid #203038;">
-                            <div class="card-header py-4 pl-4 pr-5 bg-white position-relative d-flex justify-content-between"
-                                 style="border: none;">
-                                <div class="pr-5" style="font-size: 1.6rem; font-weight: 600; color: #0b3b52;">Is this
-                                    app compatible with Odoo Enterprise?
-                                </div>
-                                <a class="card-link collapsed" data-toggle="collapse" href="#faqThree" style="
+                            <div class="card shadow mb-4" style="border: none; border-left: 10px solid #203038;">
+                                <div class="card-header py-4 pl-4 pr-5 bg-white position-relative d-flex justify-content-between"
+                                     style="border: none;">
+                                    <div class="pr-5" style="font-size: 1.6rem; font-weight: 600; color: #0b3b52;">Is
+                                        this app compatible with Odoo Enterprise?
+                                    </div>
+                                    <a class="card-link collapsed" data-toggle="collapse" href="#faqThree" style="
                                       width: 48px;
                                       height: 40px;
                                       line-height: 11px;
@@ -142,11 +193,12 @@
                                       border-radius: 2px;
                                       padding: 0;
                                       font-size: 24px;"></a>
-                            </div>
-                            <div id="faqThree" class="collapse" data-parent="#accordion">
-                                <div class="card-body pt-0 pl-4">
-                                    <div style="font-size: 1.4rem; color: #0b3b52;">
-                                        Yes, our app works with Odoo Enterprise as well as Community.
+                                </div>
+                                <div id="faqThree" class="collapse" data-parent="#accordion">
+                                    <div class="card-body pt-0 pl-4">
+                                        <div style="font-size: 1.4rem; color: #0b3b52;">
+                                            Yes, our app works with Odoo Enterprise as well as Community.
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -155,7 +207,10 @@
                 </div>
             </div>
         </div>
+        <!-- tab view / end -->
     </div>
+</div>
+</div>
 </div>
 
 

@@ -12,6 +12,7 @@
 
     'author': "Ksolves India Ltd.",
     'website': "https://store.ksolves.com/",
+    'live_test_url': 'https://ksdemo.kappso.com/',
     'images': ['static/description/Banner.png'],
     'category': 'Stock Management',
     'version': '0.1',

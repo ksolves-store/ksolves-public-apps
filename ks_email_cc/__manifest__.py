@@ -15,7 +15,7 @@
     'license': 'LGPL-3',
     'currency': 'USD',
     'price': 0.0,
-    # "live_test_url":  "http://saastoolkit.kappso.in/",
+    'live_test_url': 'https://ksdemo.kappso.com/',
     'version': '14.0.1.0.1',
     'maintainer': 'Ksolves India Ltd.',
     'support': 'sales@ksolves.com',
